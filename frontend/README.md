@@ -52,3 +52,9 @@ export default tseslint.config({
   },
 })
 ```
+
+
+# For initializing 
+-> go inside the folder mern_project
+-> run command npm i
+-> and then start the project using npm run dev
