@@ -1,4 +1,6 @@
 import React from "react";
+import { FaSearch } from "react-icons/fa";
+
 
 function Navbar() {
   return (
@@ -25,6 +27,7 @@ function Navbar() {
           {/* Navigation Items */}
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
+
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="#">Home</a>
               </li>
@@ -41,6 +44,20 @@ function Navbar() {
           </div>
         </div>
       </nav>
+      <div className="search-container mx-auto">
+            <div className="input-group">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Search for pizza..."
+                aria-label="Search"
+              />
+              <button className="btn btn-outline-secondary" type="button">
+                <FaSearch />
+              </button>
+            </div>
+          </div>
+
     </div>
   );
 }
