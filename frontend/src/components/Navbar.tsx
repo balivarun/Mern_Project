@@ -10,7 +10,7 @@ const Navbar: React.FC<NavbarProps> = () => {
 
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar bg-base-400 shadow-lg">
         <div className="navbar-start">
           <div className="dropdown">
             <div
