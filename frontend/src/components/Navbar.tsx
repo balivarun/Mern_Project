@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
+import { FaSearch, FaBars, FaTimes, FaShoppingCart } from "react-icons/fa";
 
 interface NavbarProps {
   // Add any props if needed
@@ -10,9 +10,32 @@ const Navbar: React.FC<NavbarProps> = () => {
 
   return (
     <div>
-      <div className="navbar bg-base-400 shadow-lg">
+      <div className="navbar bg- px-3 py-4 shadow-[0_4px_16px_0_rgba(249,115,22,0.5)]">
         <div className="navbar-start">
-          <div className="dropdown">
+        <div  className="text-2xl tracking-wide text-orange-500 hover:text-orange-600">
+            Buddy Pizza's
+          </div>
+        </div>
+
+        <div className="navbar-end flex gap-4">
+          {/* Search and Menu buttons moved here */}
+          <button
+            className="btn btn-ghost btn-circle"
+            aria-label="Search"
+          >
+            <FaSearch className="h-5 w-5" />
+          </button>
+
+          <button
+            className="btn btn-ghost btn-circle"
+            aria-label="Shopping Cart"
+          >
+            <div className="indicator">
+              <FaShoppingCart className="h-5 w-5" />
+            </div>
+          </button>
+
+          <div className="dropdown dropdown-end">
             <div
               tabIndex={0}
               role="button"
@@ -36,35 +59,14 @@ const Navbar: React.FC<NavbarProps> = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-300 rounded-box z-10 mt-3 w-52 p-2 shadow"
             >
               <li><a href="/">Homepage</a></li>
-              <li><a href="/portfolio">Portfolio</a></li>
-              <li><a href="/about">About</a></li>
+              <li><a href="/portfolio">Orders</a></li>
+              <li><a href="/about">About our Website</a></li>
             </ul>
           </div>
-        </div>
-        <div className="navbar-center">
-          <a href="/" className="btn btn-ghost text-xl">
-            daisyUI
-          </a>
-        </div>
-        <div className="navbar-end">
-          <button
-            className="btn btn-ghost btn-circle"
-            aria-label="Search"
-          >
-            <FaSearch className="h-5 w-5" />
-          </button>
-          <button
-            className="btn btn-ghost btn-circle"
-            aria-label="Notifications"
-          >
-            <div className="indicator">
-              <FaBars className="h-5 w-5" />
-              <span className="badge badge-xs badge-primary indicator-item"></span>
-            </div>
-          </button>
+
         </div>
       </div>
     </div>
